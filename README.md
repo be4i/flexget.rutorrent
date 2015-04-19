@@ -6,9 +6,9 @@ put rutorrent.py into your plugin folder
 
 # Configuration
 
-rutorrent:
- url: webui url without end slash "/" (required)
- path: path for download of torrent content, can be used "set" plugin (optional)
- user: webui user (optional)
- pass: webui pass (optional)
- autostart: should the torrent start automatically (optional default : true)
+rutorrent: <br />
+ url: webui url without end slash "/" (required) <br />
+ path: path for download of torrent content, can be used "set" plugin (optional) <br />
+ user: webui user (optional) <br />
+ pass: webui pass (optional) <br />
+ autostart: should the torrent start automatically (optional default : true) <br />
