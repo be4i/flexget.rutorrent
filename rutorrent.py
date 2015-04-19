@@ -25,7 +25,7 @@ class rutorrent(object):
             'url': {'type': 'string'},
             'path': {'type': 'string', 'format': 'path'},
             'autostart': {'type': 'boolean', 'default': True}
-            },
+        },
         'required': ['url'],
     }
         
@@ -44,7 +44,10 @@ class rutorrent(object):
                 # Add to default folder
                 path = ''
 
-            payload = {'dir_edit': path, 'url': entry['url'], 'torrents_start_stopped': config['autostart']}
+            payload = {'dir_edit': path, 'url': entry['url']}
+
+            if(config['autostart'] == False):
+                payload.update({'torrents_start_stopped': '1'})
             
             if task.options.test:
                 log.info('Would add `%s` to rutorrent' % entry['title'])
